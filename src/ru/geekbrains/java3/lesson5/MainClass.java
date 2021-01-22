@@ -1,8 +1,17 @@
 package ru.geekbrains.java3.lesson5;
 
 public class MainClass {
+    public static final int CARS_COUNT = 5;
 
     public static void main(String[] args) {
-	// write your code here
+
+        Stage[] stages = {
+                new Road(60),
+                new Tunnel(CARS_COUNT / 2),
+                new Road(40)
+        };
+
+        Race race = new Race(stages, CARS_COUNT);
+        race.start();
     }
 }
